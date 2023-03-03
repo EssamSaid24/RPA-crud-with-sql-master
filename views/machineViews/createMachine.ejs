@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<%- include("../partials/head") %>
+
+  <body id="body"  >
+
+    <header class="myheader">
+      <h1>RPA Development</h1>
+      <%- include("../partials/nav") %>
+    </header>
+
+    <main id="main"> 
+        <section>
+            <h1>
+                Create New Machine
+            </h1>
+            <br>
+            <form method="POST" action="/machines">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text"  > 
+                <br>
+
+
+                <label for="user_id">Select User(id)</label>
+                <input id="user_id" name="user_id" type="text"  > 
+                <br>
+                <label for="type">Type</label>
+                <select id="type" name="type">
+                <option value="Standard">Standard</option> 
+                <option value="Template">Template</option>
+                </select>
+                <br>
+                <button>Add</button>
+            </form>
+        </section>
+    </main>
+
+    <%- include("../partials/footer") %>
+    
+  </body>
+</html>

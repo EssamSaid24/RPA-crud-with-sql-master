@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<%- include("../partials/head") %>
+
+  <body id="body"  >
+
+    <header class="myheader">
+      <h1>RPA Development</h1>
+      <%- include("../partials/nav") %>
+    </header>
+
+    <main id="main"> 
+        <section>
+            <h1>
+                Create New Process
+            </h1>
+            <br>
+            <form method="POST" action="/processes">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text"  > 
+                <br>
+                <label for="package_name">Package Name</label>
+                <input id="package_name" name="package_name" type="text"  > 
+                <br>
+                <label for="package_version">Package Version</label>
+                <input id="package_version" name="package_version" type="text"  > 
+                <br>
+                <label for="priority">priority</label>
+                <select id="priority" name="priority">
+                <option value="Low">Low</option> 
+                <option value="Normal">Normal</option>
+                <option value="High">High</option> 
+                </select>
+                <!-- <h3>may choose the priority from Low, Normal or High </h3> -->
+                <br>
+                <label for="robot_id">Select Robot(id)</label>
+                <input id="robot_id" name="robot_id" type="text"  > 
+                <br>
+                <br>
+
+                <br>
+                <button>Add</button>
+            </form>
+        </section>
+    </main>
+    
+    <%- include("../partials/footer") %>
+    
+  </body>
+</html>
